@@ -1,0 +1,935 @@
+  /* LINKING GOOGLE FONT FAMILY BY URL */
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Audiowide&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Dots&display=swap');
+  /* Root value set */
+:root{
+  --gradient: linear-gradient(-45deg, #94EA37, #18CF63);
+  --accent: #18CF63;
+  --accent2: #94EA37;
+  
+  --h1: clamp(1.5rem, calc(3vw + 0.5rem), 2.5rem);
+  --h2: clamp(1rem, calc(2vw + 0.5rem), 2rem);
+  --h3: clamp(0.9rem, calc(1.5vw + 0.5rem), 1.3rem);
+  --p: clamp(0.6rem, 1.4vw, 0.8rem);
+  
+  --pad: 1vw 6vw;
+}
+  /* BASIC BOILERPLATE */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+  transition: 0.3s;
+}
+body{
+  height: max-content;
+  width: 100vw;
+  overflow-x: hidden;
+  background: #fff;
+  overflow: hidden;
+}
+  /* Setting font sizes */
+h1{
+  font-size: var(--h1);
+  line-height: calc(var(--h1) + 0.5rem);
+  font-weight: 700;
+}
+h2{
+  font-size: var(--h2);
+  line-height: calc(var(--h2) + 0.5rem);
+}
+h3{
+  font-size: var(--h3);
+}
+p{
+  font-size: var(--p);
+  color: hsla(0, 0%, 10%, 1);
+  line-height: calc(var(--p) + 0.4rem);
+}
+  /* Text selection setting */
+button{
+  user-select: none;
+  font-size: var(--p);
+  cursor: pointer;
+}
+*::selection{
+  color: #fff;
+  background: var(--accent);
+}
+.sec2 *::selection,
+footer *::selection{
+  background: #fff;
+  color: var(--accent);
+}
+.sec2 .contend .textC .storeC .store div *::selection{
+  color: #fff;
+  background: var(--accent);
+}
+.sec5 .contend .pack:nth-child(2) *::selection {
+  color: var(--accent);
+  background: #fff;
+}
+  /* CSS MAIN CODE */
+.sec1{
+  min-height: 100vh;
+  width: 100vw;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--pad);
+}
+.sec1 nav{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--pad);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  border-bottom: 1px solid hsla(0, 0%, 80%, 1);
+  background: #fff;
+}
+.sec1 nav .logo h1{
+  font-size: clamp(1rem, calc(1vw + 1rem), 2rem);
+}
+.sec1 nav .logo h1 span{
+  font-weight: 400;
+}
+.sec1 nav ul{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3vw;
+  list-style: none;
+  font-size: var(--p)
+}
+li{
+  white-space: nowrap;
+  cursor: pointer;
+  transition: 0.3s;
+}
+li:hover{
+  color: var(--accent);
+}
+.sec1 nav ul #vertical{
+  display: block;
+}
+.sec1 nav .horizontal{
+  display: none;
+}
+.sec1 nav .buttonC{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  width: max-content;
+}
+.sec1 nav .buttonC button{
+  padding: 0.8vw 2.2vw;
+  border: 2px solid #000;
+  background: transparent;
+  border-radius: 1vw;
+  transition: 0.3s;
+}
+.sec1 nav .buttonC button:nth-child(1):hover{
+  background: #000;
+  color: #fff;
+}
+.sec1 nav .buttonC button:nth-child(2){
+  border: none;
+  font-weight: bold
+}
+.sec1 nav .buttonC button:nth-child(2):hover{
+  color: var(--accent);
+}
+.sec1 nav #menu{
+  padding: 0;
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  display: none;
+}
+.sec1 nav #bg{
+  display: none;
+}
+.sec1 .contend{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4vw;
+  position: relative;
+}
+.sec1 .contend .textC{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw
+}
+.sec1 .contend .textC h1 span{
+  font-weight: 400;
+}
+.sec1 .contend .textC .analytics{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  gap: 2vw;
+}
+.sec1 .contend .textC .analytics #firstC{
+  border-right: 1px solid hsla(0, 0%, 80%, 1);
+  padding-right: 2vw
+}
+.sec1 .contend .textC .buttonC{
+  display: flex;
+  gap: 2vw;
+  margin-top: 2vw
+}
+.sec1 .contend .textC .buttonC button{
+  padding: 0.8vw 2.2vw;
+  background: #000;
+  border-radius: 1vw;
+  transition: 0.3s;
+  color: #fff;
+  border: 2px solid #000;
+}
+.sec1 .contend .textC .buttonC button:hover{
+  color: #000;
+  background: transparent;
+}
+.sec1 .contend .textC .buttonC button:last-child{
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  font-weight: bold;
+  color: #000;
+  border: none;
+}
+.sec1 .contend .imgC{
+  height: 40vw;
+  width: 50vw;
+  overflow: visible;
+  padding: 2vw 4vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: relative;
+}
+.sec1 .contend .imgC img{
+  width: 80%;
+  filter: drop-shadow(2vw 2vw 1vw hsla(0, 0%, 0%, 0.2))
+}
+.sec1 .contend .imgC div{
+  background: #fff;
+  position: absolute;
+  top: 20vw;
+  left: 5vw;
+  width: 40%;
+  padding: 3vw 2vw;
+  border-radius: 1vw;
+  filter: drop-shadow(0.5vw 0.5vw 2vw hsla(0, 0%, 0%, 0.1))
+}
+.sec2{
+  width: 100vw;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+  padding: 4vw 6vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10vw;
+}
+.sec2 *{
+  color: #fff;
+}
+.sec2 .brandC{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly
+}
+.sec2 .contend{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5vw
+}
+.sec2 .contend h1 span{
+  font-weight: 400;
+}
+.sec2 .contend .textC{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  justify-content: center;
+  height: max-content;
+}
+.sec2 .contend .textC h2{
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  font-weight: 600
+}
+.sec2 .contend .textC .storeC{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1vw;
+}
+.sec2 .contend .textC .storeC .store{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  padding: 0.5vw 1vw;
+  border-radius: 0.5vw;
+  cursor: pointer;
+}
+.sec2 .contend .textC .storeC .store div{
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5vw;
+  white-space: nowrap;
+}
+.sec2 .contend .textC .storeC .store div *{
+  color: #000;
+}
+.sec3{
+  width: 100vw;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--pad);
+  padding-top: 20vw;
+  padding-bottom: 5vw
+}
+.sec3 .imgC{
+  width: 25vw;
+  height: 25vw;
+  background: hsla(235, 0%, 95%, 1);
+  position: relative;
+  border-radius: 1vw;
+}
+.sec3 .imgC img{
+  position: absolute;
+  width: 80%;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0vw 2vw 1vw hsla(0, 0%, 0%, 0.2))
+}
+.sec3 .textC{
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  width: 50%;
+}
+.sec3 .textC button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+  border: none;
+  background: transparent;
+  color: var(--accent);
+  width: max-content;
+  padding: 0.8vw 2vw;
+  padding-left: 0;
+}
+.sec4{
+  width: 100vw;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10vw 6vw;
+}
+.sec4 .textC{
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+  width: 50%;
+}
+.sec4 .textC .checkC{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+.sec4 .textC .checkC .check{
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+.sec4 .textC button{
+  padding: 0.8vw 2.2vw;
+  background: #000;
+  border-radius: 1vw;
+  transition: 0.3s;
+  color: #fff;
+  width: max-content;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw;
+}
+.sec4 .textC button:hover{
+  background: transparent;
+  color: #000
+}
+.sec4 .textC button:hover svg{
+  fill: #000
+}
+.sec4 .imgC{
+  width: 35vw;
+  height: 30vw;
+  background: hsla(235, 0%, 95%, 1);
+  position: relative;
+  border-radius: 1vw;
+}
+.sec4 .imgC .box{
+  width: 85%;
+  height: 40%;
+  background: #fff;
+  border-radius: 2vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  box-shadow: 0vw 2vw 2vw hsla(0, 0%, 0%, 0.1);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sec4 .imgC #box2{
+  transform: translate(-50%, -50%) scale(0.9);
+  z-index: 2;
+}
+.sec4 .imgC #box3{
+  transform: translate(-50%, -0%) scale(0.8);
+  z-index: 1;
+}
+.sec4 .imgC h2{
+  font-weight: 600
+}
+.sec5{
+  width: 100vw;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--pad);
+  text-align: center;
+  gap: 2vw;
+}
+.sec5 p{
+  width: 50%
+}
+.sec5 .contend{
+  width: 100%;
+  margin: 7vw 0;
+  display: grid;
+  gap: 1vw;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.sec5 .contend .pack{
+  background: #fff;
+  height: clamp(20rem, 45vw, 30rem);
+  border-radius: 1vw;
+  border: 1px solid hsla(235, 0%, 50%, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vw;
+  box-shadow: 0 0.5vw 1vw hsla(0, 0%, 50%, 0.1);
+}
+.sec5 .contend .pack .contend{
+  width: 100%;
+  height: 85%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5vw;
+  text-align: left;
+}
+.sec5 .contend .pack .contend h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1vw
+}
+.sec5 .contend .pack .contend #line{
+  width: 100%;
+  height: 0.5px;
+  background: hsla(235, 0%, 50%, 1);
+  margin: 1vw 0;
+}
+.sec5 .contend .pack .contend p{
+  width: 100%;
+}
+.sec5 .contend .pack .contend .advantageC{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5vw;
+}
+.sec5 .contend .pack .contend .advantageC #advantage{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1vw
+}
+.sec5 .contend .pack button{
+  width: 100%;
+  padding: 1.2vw;
+  background: transparent;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 50px;
+  font-weight: bold
+}
+.sec5 .contend .pack button:hover{
+  background: #000;
+  color: #fff;
+}
+.sec5 .contend .pack:nth-child(2){
+  background: #000;
+}
+.sec5 .contend .pack:nth-child(2) *{
+  color: #fff;
+}
+.sec5 .contend .pack:nth-child(2) button{
+  color: #000;
+  background: #fff;
+  border-color: #fff;
+}
+.sec5 .contend .pack:nth-child(2) button:hover{
+  color: #fff;
+  background: transparent;
+}
+.sec6{
+  width: 100vw;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--pad);
+  text-align: center;
+  padding-top: 10vw;
+  padding-bottom: 10vw
+}
+.sec6 .textC{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  gap: 2vw;
+}
+.sec6 .textC p:nth-child(3){
+  font-weight: bold;
+}
+.sec6 .textC h3{
+  color: var(--accent);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.sec6 .faqC{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+.sec6 .faqC details{
+  border-top: 1px solid hsla(0, 0%, 70%, 1);
+  display: flex;
+  text-align: left;
+  padding-bottom: 1vw
+}
+.sec6 .faqC details summary{
+  list-style: none;
+  display: flex;
+  padding: 2vw 1vw;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.sec6 .faqC details p{
+  margin: 0 1vw;
+  color: hsla(0, 0%, 50%, 1);
+}
+.sec6 .faqC details summary #arrow{
+  transition: unset;
+}
+footer{
+  width: 100vw;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--pad);
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+footer *{
+  color: #fff;
+  text-align: left;
+}
+footer .box{
+  gap: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.5vw;
+}
+footer .box h2{
+  font-size: calc(var(--p) + 0.5rem);
+  display: inline-block;
+  line-height: calc(var(--p) + 0.5rem)
+}
+footer .box h2 span{
+  font-weight: 400;
+}
+footer .box #mail{
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 2vw
+}
+footer .box #mail:hover{
+  color: var(--accent);
+}
+footer .box #name{
+  font-weight: bold;
+  color: #fff;
+}
+footer .box p{
+  color: hsla(235, 0%, 90%, 1)
+}
+  /* MEDIA QUERY FOR HORIZONTAL MODE */
+@media (orientation: portrait) {
+    /* Root value set (FONTS SIZE ONLY) */
+  :root {
+    --h1: clamp(2rem, calc(3vw + 1rem), 3rem);
+    --h2: clamp(1.5rem, calc(3vw + 0.5rem), 2.5rem);
+    --h3: clamp(1.4rem, calc(2.5vw + 0.5rem), 2rem);
+    --p: clamp(0.9rem, 2vw, 1rem);
+  }
+    /* MAIN CSS */
+    /* Side nav for horizontal mode */
+  .sec1 nav ul #vertical {
+    display: none;
+  }
+  .sec1 nav #bg{
+    pointer-events: none;
+    height: 100vh;
+    width: 100vw;
+    background: #000;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+  }
+  .sec1 nav .horizontal {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    padding: 15vw 8vw;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 70vw;
+    background: hsla(0, 0%, 100%, 1);
+    gap: 15vw;
+    font-size: var(--p);
+    transition: 0.3s;
+    box-shadow: -1vw 0vw 3vw hsla(0, 0%, 0%, 0.05);
+    z-index: 2;
+  }
+  .sec1 nav .horizontal li{
+    width: 100%;
+    padding: 1vw 0;
+    transition: unset
+  }
+  .sec1 nav #close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 3vw 6vw;
+    transition: 0.5s ease-out;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .sec1 nav #close:hover{
+    fill: var(--accent);
+  }
+  .sec1 nav #menu {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    display: flex;
+    transform: rotateY(180deg);
+    height: var(--p);
+    align-items: center;
+    justify-content: center;
+  }
+  .sec1 nav #menu svg,
+  .sec1 nav #close svg line{
+    stroke: #000;
+    transition: 0.3s;
+  }
+  .sec1 nav #menu svg:hover,
+  .sec1 nav #close:hover svg line{
+    stroke: var(--accent);
+  }
+  .sec1 nav button{
+    display: flex;
+  }
+    /* Main contend */
+  .sec1 .contend{
+    flex-direction: column;
+    margin-top: 2vw;
+    height: 100%;
+    gap: 10vw
+  }
+  .sec1 .contend .textC{
+    width: 100%;
+  }
+  .sec1 .contend .textC .buttonC{
+    display: flex;
+    gap: 2vw;
+    margin-top: 2vw
+  }
+  .sec1 .contend .textC .buttonC button{
+    padding: 1vw 2.2vw;
+  }
+  .sec1 .contend .textC .buttonC button svg{
+    height: 5vw;
+  }
+  .sec1 .contend .imgC{
+    margin-left: 40%;
+    width: 60vw;
+  }
+  .sec1 .contend .imgC img{
+    width: 80%;
+  }
+  .sec1 .contend .imgC div{
+    left: 0vw;
+    width: 50%;
+  }
+  .sec2 .contend{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10vw;
+  }
+  .sec2 .contend .textC{
+    width: 100%;
+  }
+  .sec2 .contend .textC h2{
+    gap: 2vw;
+  }
+  .sec2 .contend .textC h2 svg{
+    height: 5vw;
+  }
+  .sec2 .contend .textC .storeC{
+    gap: 2vw
+  }
+  .sec2 .contend .textC .storeC .store{
+    gap: 1vw;
+    padding: 1vw 2vw;
+  }
+  .sec2 .contend .textC .storeC .store svg{
+    height: 5vw;
+  }
+  .sec2 .contend .textC .storeC .store div{
+    display: flex;
+    line-height: 2.5vw;
+  }
+  .sec3{
+    flex-direction: column-reverse;
+    gap: 30vw;
+    padding-top: 10vw;
+    padding-bottom: 5vw
+  }
+  .sec3 .imgC{
+    width: 45vw;
+    height: 45vw;
+    margin-left: 40%
+  }
+  .sec3 .textC{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    width: 100%;
+  }
+  .sec3 .textC button svg{
+    height: 3.5vw;
+  }
+  .sec4{
+    flex-direction: column;
+    gap: 10vw;
+    padding: 15vw 6vw;
+  }
+  .sec4 .textC{
+    width: 100%;
+  }
+  .sec4 .textC .checkC .check svg{
+    height: 3.5vw;
+  }
+  .sec4 .textC button svg{
+    height: 4vw;
+  }
+  .sec4 .imgC{
+    width: 60vw;
+    height: 50vw;
+    margin-left: 30%
+  }
+  .sec5 p {
+    width: 80%
+  }
+  .sec5 .contend{
+    justify-content: center;
+    grid-template-columns: repeat(1, minmax(300px, 0.6fr));
+    gap: 5vw
+  }
+  .sec5 .contend .pack{
+    height: clamp(25rem, 45vw, 30rem);
+    padding: 4vw;
+    gap: 2vw;
+    border-radius: 2vw
+  }
+  .sec5 .contend .pack .contend{
+    gap: 1vw;
+  }
+  .sec5 .contend .pack .contend .advantageC{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5vw;
+  }
+  .sec5 .contend .pack .contend .advantageC #advantage{
+    gap: 1.5vw
+  }
+  .sec5 .contend .pack .contend .advantageC #advantage svg{
+    height: 4vw;
+  }
+  .sec5 .contend .pack button{
+    padding: 1.5vw;
+  }
+  .sec6{
+    align-items: flex-start;
+    gap: 15vw;
+    flex-direction: column;
+    padding-top: 15vw;
+    padding-bottom: 15vw
+  }
+  .sec6 .faqC{
+    width: 100%;
+    gap: 2vw
+  }
+  .sec6 .faqC details summary{
+    padding: 3vw 1vw;
+  }
+  .sec6 .faqC details summary #arrow{
+    transition: unset;
+    height: 3vw;
+  }
+  footer{
+    flex-direction: column;
+    gap: 10vw;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+  footer *{
+    color: #fff;
+    text-align: left;
+  }
+  footer .box{
+    gap: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 0.5vw;
+  }
+}
+  /* MAKING BROWSER COMPATIBILITY */
+@supports not (gap: 3vw){
+  
+}
+  /* CUSTOM PAGE LOADER ANIMATION */
+.load{
+  height: 200vh;
+  width: 200vw;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999999999;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.load span{
+  display: inline-block;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: 15px solid var(--accent);
+  border-top-color: #fff;
+  animation: spin 1s infinite ease-out;
+}
+@keyframes spin{
+  to{
+    transform: rotate(1turn)
+  }
+}
+.hide{
+  display: none;
+}
+.scroll{
+  overflow: visible;
+}
